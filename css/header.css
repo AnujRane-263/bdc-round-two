@@ -1,0 +1,17 @@
+@import url(/css/style.css);
+
+.container .navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2.1875rem 0;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.navBar .menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  font-family: "MuseoSlabMedium";
+}

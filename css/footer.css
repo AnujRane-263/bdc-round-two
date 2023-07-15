@@ -1,0 +1,56 @@
+@import url(/css/style.css);
+.footer {
+  background: #f4f4f4;
+  padding: 3.125rem 6.25rem 1rem;
+}
+.socialLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #818181;
+}
+.footer .socialLinks .socialIcons {
+  color: grey;
+  font-size: 1.5rem;
+  padding: 0 5px;
+}
+.footer .footerContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 0 3.125rem;
+  border-bottom: 1px solid #eaeaea;
+}
+.footer .footerLinks {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 32px;
+  font-size: 0.875rem;
+}
+.footer .newsletter .label {
+  font-family: "MuseoSlabMedium";
+  font-size: 1.125rem;
+  color: #818181;
+}
+.footer .newsletterInput {
+  margin: 1.1875rem 0 0;
+  padding: 0.75rem;
+  width: 17rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #818181;
+  font-size: 14px;
+  border: unset;
+  outline: unset;
+}
+.footer .submitBtn {
+  font-size: 0.75rem;
+  font-family: "MuseoSlabLight";
+  color: white;
+  background: #3971b1;
+  outline: unset;
+  border: unset;
+  padding:  0.8125rem ;
+  max-width: 130px;
+  margin: 1.25rem 0 0;
+}

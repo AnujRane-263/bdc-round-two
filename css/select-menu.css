@@ -1,0 +1,60 @@
+@import url(/css/style.css);
+.select-menu {
+  margin: 1.5625rem 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.select-menu .select-btn {
+  display: flex;
+  background: #fff;
+  color: #8e8e8e;
+  padding: 0.625rem 0.9375rem;
+  font-weight: 400;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  border-bottom: 1px solid #d3d3d3;
+}
+.select-btn i {
+  font-size: 0.875rem;
+  color: #3971b1;
+  transition: 0.3s;
+}
+.select-menu.active .select-btn i {
+  transform: rotate(-180deg);
+}
+.select-menu .options {
+  position: relative;
+  background: #fafafa;
+  box-shadow: 0px 0px 1px #00000029;
+  display: none;
+  letter-spacing: 0px;
+  color: #8e8e8e;
+}
+.select-menu.active .options {
+  display: block;
+}
+.options .option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding: 1.5625rem 0.9375rem;
+  align-items: center;
+  border-bottom: solid 1px #d3d3d3;
+}
+.options .option:hover .option-text::after {
+  content: "";
+  position: absolute;
+  background: url("./images/selected.svg") no-repeat;
+  width: 40px;
+  height: 40px;
+  right: 0;
+}
+
+.option i {
+  font-size: 25px;
+  margin-right: 12px;
+}
+.option .option-text {
+  font-size: 1rem;
+}

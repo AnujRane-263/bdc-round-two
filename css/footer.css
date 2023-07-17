@@ -11,6 +11,9 @@
   font-family: Arial, Helvetica, sans-serif;
   color: #818181;
 }
+.socialLinks .copyrightsMob {
+  display: none;
+}
 .footer .socialLinks .socialIcons {
   color: grey;
   font-size: 1.5rem;
@@ -50,7 +53,50 @@
   background: #3971b1;
   outline: unset;
   border: unset;
-  padding:  0.8125rem ;
+  padding: 0.8125rem;
   max-width: 130px;
   margin: 1.25rem 0 0;
+}
+
+.links .socialIcons:hover {
+  color: #3971b1;
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 2.8125rem 1.25rem;
+    margin-top: 4.6875rem;
+  }
+  .footer .newsletterInput {
+    width: unset;
+  }
+  .footer .footerContent {
+    flex-direction: column-reverse;
+    align-items: unset;
+    padding: 0 0 3.75rem;
+  }
+  .footer .submitBtn {
+    max-width: unset;
+  }
+  .footer .footerLinks {
+    display: flex;
+    gap: 42px;
+    padding: 2.9375rem 0 3.75rem;
+  }
+  .socialLinks {
+    display: block;
+    text-align: center;
+    padding: 1.875rem 0 0;
+  }
+  .socialLinks .copyrights {
+    display: none;
+  }
+  .socialLinks .copyrightsMob {
+    display: block;
+  }
+  .socialLinks .links {
+    padding: 3.3125rem 0 2.5rem;
+  }
+  .footer .socialLinks .socialIcons {
+    padding: 0 0.9375rem;
+  }
 }

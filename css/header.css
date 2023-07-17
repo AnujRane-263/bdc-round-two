@@ -9,9 +9,67 @@
   border-bottom: 1px solid #d3d3d3;
 }
 
-.navBar .menu-items {
+.navBar .menu {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
   font-family: "MuseoSlabMedium";
+}
+.menu .menuItem {
+  text-decoration: none;
+  color: #3c3c3c;
+}
+.menuItem:hover {
+  color: #3971b1;
+}
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container .navBar {
+    padding: 1.25rem 0;
+    align-items: center;
+  }
+  .navBar .menu {
+    display: block;
+    background: #ffffff;
+    padding: 4rem 2rem;
+  }
+  .menu li {
+    margin: 2rem 0;
+  }
+  .hamburger {
+    display: block;
+    /* position: fixed; */
+    z-index: 100;
+    right: 1.5rem;
+    cursor: pointer;
+  }
+  .menuIcon {
+    width: 21px;
+    height: 21px;
+  }
+  .closeIcon {
+    display: none;
+    width: 21px;
+    height: 21px;
+  }
+  .menu {
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: black;
+    color: white;
+    list-style: none;
+    padding-top: 4rem;
+  }
+  .showMenu {
+    transform: translateY(0);
+  }
 }

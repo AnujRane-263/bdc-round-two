@@ -20,10 +20,6 @@
     url("/fonts/Museo_Slab_500.ttf") format("truetype"); /* Safari, Android, iOS */
 }
 
-/* :root {
-  --font-primary: "MuseoSlabLight", sans-serif;
-  --font-secondary: "MuseoSlabMedium", sans-serif;
-} */
 body {
   font-family: "MuseoSlabLight", sans-serif;
 }
@@ -51,9 +47,17 @@ h4 {
 
 .logo {
   background: #e4e4e4;
-  opacity: 1;
   padding: 0.625rem 1.5rem;
   font-family: "MuseoSlabMedium";
+}
+.footerLogo {
+  background: #e4e4e4;
+  padding: 0.625rem 1.5rem;
+  font-family: "MuseoSlabMedium";
+}
+.logo a {
+  text-decoration: none;
+  color: #3c3c3c;
 }
 
 .container {
@@ -61,6 +65,7 @@ h4 {
   /* background-position: 133% 0; */
   background-size: 70%;
   background-position: 137% 0;
+  position: relative;
 }
 .container .boxLayout {
   margin: 0 6.25rem;
@@ -70,11 +75,22 @@ h4 {
   display: flex;
   gap: 15px;
 }
+
 .heroBanner .leftWrap {
-  border-right: solid 1px #d3d3d3;
+  /* border-right: solid 1px #d3d3d3; */
   padding: 4.5rem 0;
 }
 
+.heroBanner .leftWrap:after {
+  position: absolute;
+  content: "";
+  height: calc(100vh + 350px);
+  width: 0.5px;
+  top: 15%;
+  right: 50%;
+  background-color: #d3d3d3;
+  opacity: 0.5;
+}
 .heroBanner .form {
   position: relative;
   width: 85%;
@@ -97,13 +113,15 @@ h4 {
   position: absolute;
   right: 0;
   bottom: -30%;
-  /* width: 150px; */
   background-color: #3971b1;
   color: white;
   font-family: "MuseoSlabLight";
   border: unset;
   outline: unset;
   padding: 0.9063rem 3.6875rem;
+}
+.submitBtn:hover {
+  transform: scale(1.02);
 }
 .rightWrap {
   width: 50%;
@@ -113,20 +131,186 @@ h4 {
   justify-content: flex-end;
   font-size: 0.875rem;
   letter-spacing: 0.24px;
-  padding: 15px 0;
+  padding: 0.9375rem 0;
   color: #afafaf;
 }
+
 .rightWrap .contactInfo {
   padding: calc(70vh + 250px) 6.25rem 7.5rem;
+}
+.rightWrap .sendBtn {
+  display: none;
 }
 
 .contactDetails .details {
   font-size: 1rem;
   color: #8e8e8e;
-  margin: 5px;
+  line-height: 35px;
 }
 
 .contactInfo .contactDetails {
   display: flex;
   flex-direction: column;
+}
+
+.detailsMob .phoneNum,
+.mail {
+  display: none;
+}
+@media (max-width: 768px) {
+  .contactDetails .details {
+    line-height: unset;
+  }
+  .container {
+    background-size: 150%;
+    background-position: -32% 2%;
+  }
+  h4 {
+    font-size: 1.6rem;
+    margin: 3.125rem 0;
+  }
+  .logo {
+    display: block;
+    padding: 0.625rem 1.25rem;
+  }
+  .footerLogo {
+    display: block;
+    margin: 0 auto;
+    padding: 0.625rem 1.25rem;
+  }
+  .container .boxLayout {
+    margin: unset;
+    margin: 0 1.25rem;
+  }
+  .heroBanner {
+    display: block;
+    gap: unset;
+  }
+  .heroBanner .leftWrap {
+    display: none;
+  }
+  .rightWrap {
+    width: unset;
+  }
+  .rightWrap .mapText {
+    display: none;
+  }
+  .rightWrap .contactInfo {
+    padding: unset;
+  }
+  .rightWrap .sendBtn {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font-size: 0.75rem;
+    font-family: "MuseoSlabLight";
+    color: white;
+    background: #3971b1;
+    outline: unset;
+    border: unset;
+    padding: 1rem;
+    margin-top: calc(50vh - 215px);
+  }
+
+  .cursor {
+    display: none;
+  }
+  .detailsMob .phoneNum,
+  .mail {
+    display: block;
+    color: #8e8e8e;
+  }
+  .detailsMob {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: solid 1px #d3d3d3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+  }
+  .detailsMob .details {
+    color: black;
+  }
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  background: #3971b1;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  animation: cursorAnim 0.5s infinite alternate;
+  pointer-events: none;
+}
+
+.cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 8px solid rgb(57, 113, 177, 0.6);
+  border-radius: 50%;
+  opacity: 0.5;
+  top: -8px;
+  left: -8px;
+  animation: cursorAnim2 0.5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.4);
+  }
+}
+
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.expand {
+  animation: cursorAnim3 0.5s forwards;
+}
+
+.primaryBtn span {
+  position: relative;
+  transition: 0.5s;
+}
+.primaryBtn span::after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.primaryBtn:hover span {
+  padding-right: 25px;
+}
+.primaryBtn:hover span:after {
+  opacity: 1;
+  right: 0;
 }

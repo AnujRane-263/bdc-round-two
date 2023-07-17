@@ -1,36 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>LOGO</title>
-        <link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    
-    
-    <link rel="stylesheet" type="text/css" href="/css/style.css"  />
-    <link rel="stylesheet" type="text/css" href="/css/header.css">
-    <link rel="stylesheet" type="text/css" href="/css/select-menu.css">
-    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="/css/select-menu.css" />
+    <link rel="stylesheet" type="text/css" href="/css/footer.css" />
   </head>
   <body>
     <div class="container">
       <div class="boxLayout">
         <header>
           <div class="navBar">
-            <div class="logo">LOGO</div>
-            <ul class="menu-items">
-              <li>PROJECTS</li>
-              <li>ABOUT</li>
-              <li>NRI AREA</li>
-              <li>NEWS & THOUGHTS</li>
-              <li>CONTACT</li>
+            <div class="logo"><a href="/">LOGO</a></div>
+            <ul class="menu">
+              <li>
+                <a href="#" class="menuItem">PROJECTS</a>
+              </li>
+              <li>
+                <a href="#" class="menuItem">ABOUT</a>
+              </li>
+              <li>
+                <a href="#" class="menuItem">NRI AREA</a>
+              </li>
+              <li>
+                <a href="#" class="menuItem">NEWS & THOUGHTS</a>
+              </li>
+              <li>
+                <a href="#" class="menuItem">CONTACT</a>
+              </li>
             </ul>
+            <div class="hamburger">
+              <img
+                src="/images/hamburger.svg"
+                class="menuIcon"
+                alt="hamburger-menu"
+              />
+              <img src="/images/close.png" class="closeIcon" alt="close-icon" />
+            </div>
           </div>
         </header>
+        <!-- HEADER -->
         <div class="heroBanner">
           <div class="leftWrap">
             <h3>Contact Us</h3>
@@ -68,10 +86,11 @@
                 </ul>
               </div>
 
-              <input type="submit" value="Send" class="submitBtn" />
+              <button class="submitBtn"><span>Send</span></button>
             </form>
           </div>
           <div class="rightWrap">
+            <div class="cursor"></div>
             <span class="mapText"
               >Lorem ipsum dolor sit amet - consetetur sadipscing elitr</span
             >
@@ -84,38 +103,63 @@
                 <span class="details"
                   >+91 000 0000 000 | test1@gmail.com | test2@gmail.com</span
                 >
+                <div>
+                  <button class="sendBtn">
+                    <span>Send us an Enquiry</span>
+                  </button>
+                </div>
               </div>
               <div class="contactDetails">
                 <p class="activeText" style="padding-top: 3.125rem">
                   Sales Enquiry
                 </p>
-                <span class="details">+91 000 0000 000 </span>
-                <span class="details">test1@gmail.com</span>
+                <div class="detailsMob">
+                  <span class="phoneNum">Phone</span>
+                  <span class="details">+91 000 0000 000 </span>
+                </div>
+
+                <div class="detailsMob">
+                  <span class="mail">Email</span>
+                  <span class="details">test1@gmail.com</span>
+                </div>
               </div>
 
               <div class="contactDetails">
                 <p class="activeText" style="padding-top: 3.125rem">
                   Redevelopment Centre
                 </p>
-                <span class="details">+91 000 0000 000 </span>
-                <span class="details">test1@gmail.com</span>
+                <div class="detailsMob">
+                  <span class="phoneNum">Phone</span>
+                  <span class="details">+91 000 0000 000 </span>
+                </div>
+
+                <div class="detailsMob">
+                  <span class="mail">Email</span>
+                  <span class="details">test1@gmail.com</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- HEROBANNER -->
       </div>
       <div class="footer">
         <div class="footerContent">
-          <div class="logo">LOGO</div>
+          <div class="footerLogo">LOGO</div>
           <ul class="footerLinks">
-            <li>Projects</li>
-            <li>About</li>
-            <li>NRI Area</li>
-            <li>News & Thoughts</li>
-            <li>Employee Corner</li>
-            <li>CSR</li>
-            <li>Contact</li>
-            <li>Disclaimer</li>
+            <div class="blockOne">
+              <li>Projects</li>
+              <li>About</li>
+              <li>NRI Area</li>
+              <li>News & Thoughts</li>
+            </div>
+
+            <div class="blockTwo">
+              <li>Employee Corner</li>
+              <li>CSR</li>
+              <li>Contact</li>
+              <li>Disclaimer</li>
+            </div>
           </ul>
           <div class="newsletter">
             <span class="label">Get the latest news</span>
@@ -125,22 +169,26 @@
                 placeholder="Enter email"
                 class="newsletterInput"
               />
-              <button class="submitBtn">Subscribe</button>
+              <button class="submitBtn primaryBtn">
+                <span>Subscribe</span>
+              </button>
             </form>
           </div>
         </div>
         <div class="socialLinks">
-          <div>An ISO 9001:2008 Certified Company</div>
-          <div>© copyrights 2019</div>
-          <div>
+          <p>An ISO 9001:2008 Certified Company</p>
+          <p class="copyrights">© copyrights 2019</p>
+          <div class="links">
             <i class="fab fa-facebook-f socialIcons"></i>
             <i class="fab fa-instagram socialIcons"></i>
             <i class="fab fa-linkedin socialIcons"></i>
             <i class="fab fa-twitter socialIcons"></i>
             <i class="fab fa-youtube socialIcons"></i>
           </div>
+          <p class="copyrightsMob">© copyrights 2019</p>
         </div>
       </div>
+      <!-- FOOTER -->
     </div>
     <script src="script.js"></script>
   </body>

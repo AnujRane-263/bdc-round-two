@@ -45,7 +45,7 @@
 .options .option:hover .option-text::after {
   content: "";
   position: absolute;
-  background: url("./images/selected.svg") no-repeat;
+  background: url("/images/selected.svg") no-repeat;
   width: 40px;
   height: 40px;
   right: 0;

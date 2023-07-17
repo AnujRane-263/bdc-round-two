@@ -138,6 +138,15 @@ h4 {
 .rightWrap .contactInfo {
   padding: calc(70vh + 250px) 6.25rem 7.5rem;
 }
+
+.contactInfo .details {
+  color: #8E8E8E;
+}
+.contactInfo .details a{
+  text-decoration: none;
+  color: #8E8E8E;
+
+}
 .rightWrap .sendBtn {
   display: none;
 }
@@ -147,6 +156,7 @@ h4 {
   color: #8e8e8e;
   line-height: 35px;
 }
+
 
 .contactInfo .contactDetails {
   display: flex;
